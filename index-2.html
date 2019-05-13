@@ -1,0 +1,516 @@
+<!doctype html>
+<html lang="en">
+
+
+<head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <link rel="icon" href="images/favicon.png">
+      <title>ECO HTML</title>
+      <!-- CSS FILES START -->
+      <link href="css/custom.css" rel="stylesheet">
+      <link href="css/color.css" rel="stylesheet">
+      <link href="css/responsive.css" rel="stylesheet">
+      <link href="css/owl.carousel.min.css" rel="stylesheet">
+      <link href="css/bootstrap.min.css" rel="stylesheet">
+      <link href="css/prettyPhoto.css" rel="stylesheet">
+      <link href="css/all.min.css" rel="stylesheet">
+
+
+      <link href="css/slick.css" rel="stylesheet">
+      <!-- CSS FILES End -->
+
+<!--mapa leaflet-->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
+   integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+   crossorigin=""/>
+
+   <!-- Make sure you put this AFTER Leaflet's CSS -->
+ <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
+   integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
+   crossorigin=""></script>
+
+   </head>
+   <body>
+      <div class="wrapper home2">
+         <!--Header Start-->
+         <header class="header-style-2">
+            <nav class="navbar navbar-expand-lg">
+               <a class="navbar-brand" href="index-2.html"> <div class="row">
+                 <div class="col-2" style="padding-left:10%!important">
+                 <img style="height:30px;" src="images/ubicacion.png" alt="">
+                </div>
+                <div class="col-8" style="padding-left:0%!important">
+                  <h3>SupportSarg</h3>
+                  </div>
+               </div> </a>
+               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <i class="fas fa-bars"></i> </button>
+               <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav mr-auto">
+                     <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="index-2.html"  role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Home </a>
+                        <ul class="dropdown-menu" >
+                           <li><a href="index-2.html">Inicio</a></li>
+
+                        </ul>
+                     </li>
+
+                     <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="events-grid.html"  role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Events </a>
+                        <ul class="dropdown-menu" >
+
+                        </ul>
+                     </li>
+
+                     <li class="nav-item"> <a class="nav-link" href="blog.html">blogs</a> </li>
+                     <li class="nav-item"> <a class="nav-link" href="blog.html">Añadir sitio</a> </li>
+
+                  <ul class="topnav-right">
+                     <li> <a class="mdonate" href="donation.html"><span>Make a Donation</span></a> </li>
+                     <li> <a class="search-icon" href="#search"> <i class="fas fa-search"></i> </a> </li>
+                     <li class="dropdown">
+                        <a class="cart-icon" href="#" role="button" id="cartdropdown" data-toggle="dropdown"> <i class="fas fa-shopping-cart"></i></a>
+                        <div class="dropdown-menu cart-box" aria-labelledby="cartdropdown">
+                           Recently added item(s)
+                           <ul class="list">
+                              <li class="item">
+                                 <a href="#" class="preview-image"><img class="preview" src="images/pro.jpg" alt=""></a>
+                                 <div class="description"> <a href="#">Sample Course</a> <strong class="price">1 x $44.95</strong> </div>
+                              </li>
+                              <li class="item">
+                                 <a href="#" class="preview-image"><img class="preview" src="images/pro.jpg" alt=""></a>
+                                 <div class="description"> <a href="#">Sample Course</a> <strong class="price">1 x $44.95</strong> </div>
+                              </li>
+                           </ul>
+                           <div class="total">Total: <strong>$44.95</strong></div>
+                           <div class="view-link"><a href="#">Proceed to Checkout</a> <a href="#">View cart </a></div>
+                        </div>
+                     </li>
+                     <li class="login-reg"> <a href="my-account.html">Login</a> | <a href="my-account.html">Signup</a> </li>
+                  </ul>
+               </div>
+            </nav>
+         </header>
+         <div id="search">
+            <button type="button" class="close">×</button>
+            <form class="search-overlay-form">
+               <input type="search" value="" placeholder="type keyword(s) here" />
+               <button type="submit" class="btn btn-primary"><i class="fas fa-search"></i></button>
+            </form>
+         </div>
+         <!--Header End-->
+         <!--Slider Start-->
+         <section>
+            <div id="map"  class="mp" style="height: 300px; margin: 10px; border-radius:7px;">
+
+            </div>
+
+            <div class="timeline-box" style="background:#ffc1073d ; padding:10px;">
+              <div class="input-group mb-3">
+<input type="text" class="form-control" placeholder="Nombre del sitio" aria-label="Recipient's username" aria-describedby="button-addon2">
+<div class="input-group-append">
+<a href="busqueda.php"> <button class="btn btn-secondary" type="button" id="button-addon2">Buscar</button></a>
+</div>
+</div>
+           </div>
+         </section>
+         <!--Slider End-->
+         <!--Service Area Start-->
+
+         <!--Service Area End-->
+         <!--About Section Start-->
+<div style="padding:15px;">
+  <div >
+    <h3>Que es el sargazo?</h3>
+  </div>
+  <div>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+     Ut enim ad minim veniam.
+  </div>
+
+
+
+</div>
+
+<div class="our-success-story wf100" style="padding-bottom:0px!important">
+   <div class="container">
+      <div class="row">
+         <div class="col-lg-4">
+            <div class="story-title-bg" style="background: url(images/sargazo.jpg) no-repeat;"> <strong class="t3">Sargazo</strong> <strong class="t3">Problema de Quintana Roo.</strong>
+            </div>
+         </div>
+         <div class="col-lg-8">
+            <div class="section-title-2">
+               <h5>Historial</h5>
+               <h2>Incremento del sargazo a través del tiempo</h2>
+            </div>
+            <!--eco History Start-->
+            <div class="eco-history">
+               <div class="timeline-slider">
+                  <div class="timeline-nav">
+                     <div><span><strong>2010 - 2012</strong></span></div>
+                     <div><span><strong>2012 - 2015</strong></span></div>
+                     <div><span><strong>2015 - 2016</strong></span></div>
+                     <div><span><strong>2016 - 2017</strong></span></div>
+                     <div><span><strong>2017 - 2018</strong></span></div>
+                     <div><span><strong>2018 - 2019</strong></span></div>
+                  </div>
+                  <div class="timeline">
+                     <!--Timeline Text Start-->
+                     <div>
+                        <div class="row">
+                           <div class=" col-4">
+                              <div class="timeline-box">
+                                 <h6>Aproximado de área afectada</h6>
+<h1>30%</h1>                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <!--Timeline Text End-->
+                     <!--Timeline Text Start-->
+                     <div>
+                        <div class="row">
+                           <div class=" col-4">
+                              <div class="timeline-box">
+                                 <h6>Aproximado de área afectada</h6>
+<h1>45%</h1>                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <!--Timeline Text End-->
+                     <!--Timeline Text Start-->
+                     <div>
+                        <div class="row">
+                           <div class=" col-4">
+                              <div class="timeline-box">
+                                 <h6>Aproximado de área afectada</h6>
+<h1>56%</h1>                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <!--Timeline Text End-->
+                     <!--Timeline Text Start-->
+                     <div>
+                        <div class="row">
+                           <div class=" col-4">
+                              <div class="timeline-box">
+                                 <h6>Aproximado de área afectada</h6>
+<h1>34%</h1>                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <!--Timeline Text End-->
+                     <!--Timeline Text Start-->
+                     <div>
+                        <div class="row">
+                           <div class=" col-4">
+                              <div class="timeline-box">
+                                 <h6>Aproximado de área afectada</h6>
+<h1>76%</h1>                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <!--Timeline Text End-->
+                     <!--Timeline Text Start-->
+                     <div>
+                        <div class="row">
+                           <div class=" col-4">
+                              <div class="timeline-box">
+                                 <h6>Aproximado de área afectada</h6>
+<h1>56%</h1>                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <!--Timeline Text End-->
+                  </div>
+               </div>
+            </div>
+            <!--Political History End-->
+         </div>
+      </div>
+   </div>
+</div>
+
+
+         <!--About Section End-->
+         <!--Urgent Causes Start-->
+         <section id="situacoon" class="urgent-causes wf100 p80" style="margin-top:3%!important;">
+            <div class="container">
+               <div class="row">
+                  <div class="col-md-6" style="background:#00000069;">
+                     <div class="section-title-2 white">
+                        <h5>Situación actual</h5>
+                        <h2>% Afectado del litoral del Quitana Roo</h2>
+                     </div>
+                     <div class="progress">
+                        <div class="progress-bar" role="progressbar" style="width: 35%" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100"></div>
+                     </div>
+                     <ul class="funds">
+                        <li class="text-left"><strong>0%</strong></li>
+                        <li class="text-center"><strong>50%</strong></li>
+                        <li class="text-right"><strong>100%</strong></li>
+                     </ul>
+                  </div>
+                  <div class="col-md-6">
+                     <div class="donation-amount" style="background:#00000069;">
+                        <h5>Áreas mas afectadas</h5>
+                        <ul >
+                          <li>
+                          <h5>Akumal</h5>
+                          </li>
+                          <li>
+                          <h5>Cancún</h5>
+                          </li>
+                          <li>
+                          <h5>Puerto morelos</h5>
+                          </li>
+                          <li>
+                          <h5>Isla mujeres</h5>
+                          </li>
+                          <li>
+                          <h5>Tulum</h5>
+                          </li>
+                        </ul>
+
+
+                          <a href="http://192.168.101.49/Sargazo"> <button class="btn btn-success" type="submit">Agrega un sitio afectado</button></a>
+
+
+                            <button   style="margin-top:5px!important" class="btn btn-danger" type="submit">Ver todos los sitios afectados</button>
+
+
+
+
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <!--Urgent Causes End-->
+         <!--Current Projects Start-->
+         <section class="wf100 p80 current-projects">
+            <div class="container">
+               <div class="row">
+                  <div class="col-lg-6">
+                     <div class="section-title-2">
+                        <h5>Problema de todos</h5>
+                        <h2>Acciones y Actividades</h2>
+                     </div>
+                  </div>
+
+               </div>
+               <div class="row">
+                  <div class="col-md-12">
+                     <div class="tab-content" id="myTabContent">
+                        <!--WildLife Slider Start-->
+                        <div class="tab-pane fade show active" id="wildlife" role="tabpanel" aria-labelledby="wildlife-tab">
+                           <div class="cpro-slider owl-carousel owl-theme">
+                              <!--Pro Box-->
+                              <div class="item">
+                                 <div class="pro-box">
+                                    <img src="images/reco.jpg" alt="">
+                                    <h5>Recolecta de sargazo</h5>
+                                    <div class="pro-hover">
+                                       <h6>Recolecta de sargazo</h6>
+                                       <p>We are working over 20 years on Waste Management & Material Recycling Projects.</p>
+                                       <a href="#">Leer más...</a>
+                                    </div>
+                                 </div>
+                              </div>
+                              <!--Pro Box End-->
+                              <!--Pro Box-->
+                              <div class="item">
+                                 <div class="pro-box">
+                                    <img src="images/conferencia.jpg" alt="">
+                                    <h5>Conferencias informativas</h5>
+                                    <div class="pro-hover">
+                                       <h6>Conferencias informativas</h6>
+                                       <p>We are working over 20 years on Waste Management & Material Recycling Projects.</p>
+                                       <a href="#">Leer más...</a>
+                                    </div>
+                                 </div>
+                              </div>
+                              <!--Pro Box End-->
+                              <!--Pro Box-->
+                              <div class="item">
+                                 <div class="pro-box">
+                                    <img src="images/venta.jpeg" alt="">
+                                    <h5>Venta del sargazo</h5>
+                                    <div class="pro-hover">
+                                       <h6>Comercializacion a productores</h6>
+                                       <p>We are working over 20 years on Waste Management & Material Recycling Projects.</p>
+                                       <a href="#">Leer más...</a>
+                                    </div>
+                                 </div>
+                              </div>
+                              <!--Pro Box End-->
+                              <!--Pro Box-->
+                              <div class="item">
+                                 <div class="pro-box">
+                                    <img src="images/uso.jpg" alt="">
+                                    <h5>Usos y aplicaciones
+                                    </h5>
+                                    <div class="pro-hover">
+                                       <h6>Usos y aplicaciones</h6>
+                                       <p>We are working over 20 years on Waste Management & Material Recycling Projects.</p>
+                                       <a href="#">Leer más...</a>
+                                    </div>
+                                 </div>
+                              </div>
+                              <!--Pro Box End-->
+                              <!--Pro Box-->
+
+                              <!--Pro Box End-->
+                           </div>
+                        </div>
+                        <!--WildLife Slider End-->
+                        <!--Water Resources Slider Start-->
+
+                        <!--Water Resources Slider End-->
+                        <!--Solar Energy Slider Start-->
+
+                        <!--Solar Energy Slider End-->
+                        <!--Recycling Slider Start-->
+
+                        <!--Recycling Slider End-->
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <!--Current Projects End-->
+         <!--News & Articles Start-->
+         <section class="h2-news wf100 p80">
+            <div class="container">
+               <div class="row">
+                  <div class="col-md-6">
+                     <div class="section-title-2">
+
+                        <h2>Publicaciones de ayuda</h2>
+                     </div>
+                  </div>
+
+               </div>
+               <div class="row">
+                  <div class="col-md-6">
+                     <div class="blog-post-large">
+                        <div class="post-thumb"> <a href="#"><i class="fas fa-link"></i></a> <img src="images/maha1.jpg" alt=""></div>
+                        <div class="post-txt">
+                           <ul class="post-meta">
+                              <li><i class="fas fa-calendar-alt"></i> 5 mayo, 2019</li>
+                              <li><i class="fas fa-comments"></i> 134 Comments</li>
+                           </ul>
+                           <h5><a href="#">Mahahual 1</a></h5>
+                        </div>
+
+
+                     </div>
+                     <center> <a href="busqueda.php"><button type="button" class="btn btn-warning" style="margin-bottom:5px!important; margin-top:5px!important;">Ver todas</button><center></a>
+                     <center><a href="busqueda.php">  <button type="button" class="btn btn-warning">Añadir una publicación</button><center></a>
+                  </div>
+                  <div class="col-md-6">
+                     <!--Blog Small Post Start-->
+                     <div class="blog-small-post">
+                        <div class="post-thumb"> <a href="#"><i class="fas fa-link"></i></a> <img src="images/xca1.jpg" alt=""> </div>
+                        <div class="post-txt">
+                           <span class="pdate"> <i class="fas fa-calendar-alt"></i> 10 de mayo, 2019</span>
+                           <h5><a href="#">Xcalak 1</a></h5>
+
+                           <a href="#" class="rm">ver completa</a>
+                        </div>
+                     </div>
+                     <!--Blog Small Post End-->
+                     <!--Blog Small Post Start-->
+                     <div class="blog-small-post">
+                        <div class="post-thumb"> <a href="#"><i class="fas fa-link"></i></a> <img src="images/maha2.jpg" alt=""> </div>
+                        <div class="post-txt">
+                           <span class="pdate"> <i class="fas fa-calendar-alt"></i> 12 mayo, 2019</span>
+                           <h5><a href="#">Mahahual 2</a></h5>
+
+                           <a href="#" class="rm">ver completa</a>
+
+
+                        </div>
+                     </div>
+                     <!--Blog Small Post End-->
+                  </div>
+               </div>
+            </div>
+         </section>
+         <!--News & Articles End-->
+         <!--Why Ecova + Facts Start-->
+
+         <!--Why Ecova + Facts End-->
+         <!--Online Products Start-->
+
+         <!--Online Products End-->
+         <!--InstaGram Start-->
+
+         <!--InstaGram End-->
+         <!--Footer Start-->
+         <footer class="footer" style="background:#ffc107ba!important"">
+            <div class="footer-top wf100">
+               <div class="container">
+                  <div class="row">
+
+                  </div>
+               </div>
+            </div>
+            <div class="footer-copyr wf100" ">
+               <div class="container">
+                  <div >
+                     <center><div class="col-md-4 col-sm-4"> <img src="images/ubicacion.png" alt=""> </div><center>
+
+                  </div>
+               </div>
+            </div>
+         </footer>
+         <!--Footer End-->
+      </div>
+      <!--   JS Files Start  -->
+      <script src="js/jquery-3.3.1.min.js"></script>
+      <script src="js/jquery-migrate-1.4.1.min.js"></script>
+      <script src="js/popper.min.js"></script>
+      <script src="js/bootstrap.min.js"></script>
+      <script src="js/owl.carousel.min.js"></script>
+      <script src="js/jquery.prettyPhoto.js"></script>
+      <script src="js/isotope.min.js"></script>
+      <script src="js/slick.min.js"></script>
+      <script src="js/custom.js"></script>
+
+
+
+
+   </body>
+   <script type="text/javascript">
+   var map = L.map('map')
+   L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoieWFtYm8iLCJhIjoiY2p2Z3ZoZHB1MDd5aDN5bWdzemlrdDVzaCJ9.08hX4NDLVbjZh5E9pLVDDg').addTo(map);
+
+function buscarLocalizacion(e) {
+   L.marker(e.latlng).addTo(map);
+}
+
+function errorLocalizacion(e) {
+   alert("No es posible encontrar su ubicación. Es posible que tenga que activar la geolocalización.");
+}
+
+   function onMapClick(e) {
+    alert("You clicked the map at " + e.latlng);
+}
+map.on('locationerror', errorLocalizacion);
+map.on('locationfound', buscarLocalizacion);
+
+map.on('click', onMapClick);
+
+map.locate({setView: true, maxZoom:7
+
+
+});
+
+   </script>
+
+
+
+</html>
